@@ -1,0 +1,5 @@
+Averiguar bien como se saca la potencia de una señal 
+
+Si mal no recuerdo hayd os formas, una  que es con logaritmo  la otra
+es la magnitud al cuadrado o algo asi ( revisar eso)
+

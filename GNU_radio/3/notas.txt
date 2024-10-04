@@ -1,0 +1,3 @@
+Revisar porque el filtro pasa banda no sirve.
+revisar las frecuencias de corte de cada bloque 
+Revisar como se ve cada frecuencia que quiera ver 

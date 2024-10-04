@@ -1,0 +1,7 @@
+ver el nuumero de muestras
+filtro lpf
+
+frecuencia de muestreo 
+
+
+shortran tff

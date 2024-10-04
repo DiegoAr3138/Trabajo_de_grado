@@ -1,0 +1,5 @@
+Este Bloque ya sirve, y me guarda la parte de la señal real y de la señal imaginaria
+Falta entender que significa la parte imaginaria de la señal
+Quizas la parte imaginaria de la señal sea porque estoy probando con una fuente de ruido
+Ademas que guarda los valores a constante tiempo por ende toca buscar una forma de
+alamcenarlos y volverlos vectores para leer señales en cierto determinado tiempo

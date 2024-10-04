@@ -1,0 +1,13 @@
+1. Creamos un entorno virtual
+    Usamos el siguiente comando para crear el entorno de trabajo
+    y no tener que instalar todos los modulos en global
+
+        python3.11 - m venv venv
+
+    Con el comando anterior creamos el entorno virutal 
+
+2. Activacion del entorno virtual usamos el siguiente comando
+
+        source venv/Scripts/activate 
+
+        
