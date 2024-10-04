@@ -10,4 +10,27 @@
 
         source venv/Scripts/activate 
 
+    Para desactivarlo usamos el comando 
+    
+    deactivate
+
+
+3. Correr el FastAPI
+    para poder correr el FastAPI usamos el comando uvicorn en la terminal:
+    --port : esto me ayuda a seleccionar el puerto
+    --reload : esto me ayuda a que la pagina se recargue sola cada vez que guardemos cambios
+    --host : esto ayuda para que podamos usarla desde otros dispositivos 
+
+        uvicorn (nombre del archivo) : (nombre de la app) --host (host) --port (puerto) --reload
+
+        ejemplo:
+
+        Revisar el comando host
+        
+            uvicorn main:app --host 0.0.0.0 --port 5000 --reload
+
+            uvicorn main:app --port 5000 --reload
+
+    Una vez ejecutado esto nos dara un puerto al cual podemos acceder para desactivarlo lo ahcemos
+    con ctrl + C 
         
