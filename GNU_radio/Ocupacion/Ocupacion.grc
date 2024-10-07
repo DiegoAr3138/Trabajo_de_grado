@@ -181,10 +181,10 @@ blocks:
 - name: epy_block_0
   id: epy_block
   parameters:
-    _source_code: "import numpy as np\nfrom gnuradio import gr\nimport sqlite3\n\n\
-      class blk(gr.sync_block):  # other base classes are basic_block, decim_block,\
-      \ interp_block\n    \"\"\"Bloque para almacenar la se\xF1al recibida en una\
-      \ base de datos SQLite\"\"\"\n\n    def __init__(self, db_file='signals.db',\
+    _source_code: "import numpy as np\nfrom gnuradio import gr\nimport sqlite3\nimport\
+      \ mysql\n\nclass blk(gr.sync_block):  # other base classes are basic_block,\
+      \ decim_block, interp_block\n    \"\"\"Bloque para almacenar la se\xF1al recibida\
+      \ en una base de datos SQLite\"\"\"\n\n    def __init__(self, db_file='signals.db',\
       \ table_name='signal_data'):  \n        \"\"\"Constructor: Define los par\xE1\
       metros de la base de datos\"\"\"\n        gr.sync_block.__init__(\n        \
       \    self,\n            name='SQLite Signal Storage Block',  # nombre del bloque\
