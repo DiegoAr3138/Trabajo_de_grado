@@ -1,5 +1,3 @@
-from fastapi import
-
 
 
 class Movie(BaseModel):

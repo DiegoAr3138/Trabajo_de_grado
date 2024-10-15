@@ -7,8 +7,6 @@ import datetime
 app = FastAPI()
 
 
-
-
 app.title = "Mi primer aplicacion"
 app.version = "1.0"
 
