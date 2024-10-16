@@ -1,3 +1,7 @@
+from pydantic import BaseModel
+from pydantic import Field
+import datetime
+
 
 
 class Movie(BaseModel):
@@ -29,13 +33,7 @@ class MovieCreate(BaseModel):
         }
     }
     
-    @validator("title")
-    def validate_title(cls, value):
-        if len(value)<5:
-            raise ValueError("EL titutlo debe tener como minimo 5 caracteres")
-        if len(value)>15:
-            raise ValueError("EL titutlo debe tener como maximo 15 caracteres")
-        return value
+
 
 
 class MovieUpdate(BaseModel):

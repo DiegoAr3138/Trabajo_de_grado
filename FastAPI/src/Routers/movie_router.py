@@ -1,22 +1,27 @@
+from typing import List
+from fastapi import Path, Query, APIRouter
+from fastapi.responses import JSONResponse 
 from src.models.movie_models import Movie, MovieCreate, MovieUpdate
 
 
 movies: List[Movie] =[]
 
-@app.get("/movies" , tags=['Movies'] , status_code=200 , response_description="esto nos debe de devolter algo")
+movie_router = APIRouter()
+
+@movie_router.get("/movies" , tags=['Movies'] , status_code=200 , response_description="esto nos debe de devolter algo")
 def get_movies() -> list[Movie]:
     content = [movie.model_dump() for movie in movies]
     return JSONResponse(content=content, status_code=400)
 
 
-@app.get("/movies/{id}" , tags=['Movies'])
+@movie_router.get("/movies/{id}" , tags=['Movies'])
 def get_movie(id: int = Path(gt=0)) -> Movie | dict:
     for movie in movies:
         if movie.id == id:
             return JSONResponse(content=movie.model_dump())
     return JSONResponse(content={})
 
-@app.get("/movies/" , tags=['Movies'])
+@movie_router.get("/movies/" , tags=['Movies'])
 def get_movie_by_category(category:str = Query(min_length=5, max_length=20)) -> Movie | dict:
     for movie in movies:
         if movie.category == category:
@@ -24,7 +29,7 @@ def get_movie_by_category(category:str = Query(min_length=5, max_length=20)) -> 
     return{}
 
 
-@app.post('/movies', tags=['Movies'])
+@movie_router.post('/movies', tags=['Movies'])
 def create_movie(movie: MovieCreate) -> List[Movie]:
     movies.append(movie)
     content = [movie.model_dump() for movie in movies]
@@ -35,7 +40,7 @@ def create_movie(movie: MovieCreate) -> List[Movie]:
 
 
 
-@app.put("/movies/{id}", tags=["Movies"])
+@movie_router.put("/movies/{id}", tags=["Movies"])
 def update_movie(id:int,movie:MovieUpdate)->List[Movie]:
     for item in movies:
         if item.id == id:
@@ -48,7 +53,7 @@ def update_movie(id:int,movie:MovieUpdate)->List[Movie]:
     return JSONResponse(content=content)
 
 
-@app.delete("/movies/{id}", tags=["Movies"])
+@movie_router.delete("/movies/{id}", tags=["Movies"])
 def delete_movie(id:int) -> List[Movie]:
     for movie in movies:
         if movie.id == id: 
@@ -56,6 +61,6 @@ def delete_movie(id:int) -> List[Movie]:
     content = [movie.model_dump() for movie in movies]
     return JSONResponse(content=content)
 
-@app.get('/get_file')
+@movie_router.get('/get_file')
 def get_file():
     return FileResponse('Notas.txt')
