@@ -1,0 +1,10 @@
+Teniendo en cueta el proyeceto y lo que dio la ane 
+
+ - la vista principal va a ser el login y el singup 
+ - seguido a esto va a ir el home ( se puede elegir la señal para analizar)
+ - Perfil (da a conocer los datos del usuario o modificarlos)
+ - Señales ( deja subir o modificar las señales)
+ - dispositivos ( deja añadir y visualizar los dipositivos para guardarlos)
+ - antenas (deja añadir y visualizar los dispositivos)
+
+
