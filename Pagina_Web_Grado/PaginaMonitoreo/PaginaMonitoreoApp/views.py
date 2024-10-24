@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponse
 
 # Create your views here.
 def login(request): #se va a encargar de registar o  de dar el permiso a la persona
-    return HttpResponse('Login')
+    return render(request, 'login.html')
 
 def home(request):
     return HttpResponse('Home')
@@ -16,5 +16,5 @@ def señales(request):
 def dispositivos(request):
     return HttpResponse('Dispositivos')
 
-def antenas(request):
+def antenas(request):   
     return HttpResponse('Antenas')

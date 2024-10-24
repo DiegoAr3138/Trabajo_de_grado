@@ -21,9 +21,9 @@ from PaginaMonitoreoApp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.login,name='Login'),
-    path('',views.home,name='Home'),
-    path('',views.perfil,name='Perfil'),
-    path('',views.señales,name='Señales'),
-    path('',views.dispositivos ,name='Dispositivos'),
-    path('',views.antenas,name='Antenas'),
+    path('home/',views.home,name='Home'),
+    path('perfil/',views.perfil,name='Perfil'),
+    path('señales/',views.señales,name='Señales'),
+    path('dispositivos/',views.dispositivos ,name='Dispositivos'),
+    path('antenas/',views.antenas,name='Antenas'),
 ]
