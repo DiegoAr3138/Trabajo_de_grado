@@ -1,6 +1,7 @@
 import numpy as np
 from gnuradio import gr
 import sqlite3
+import mysql
 
 class blk(gr.sync_block):  # other base classes are basic_block, decim_block, interp_block
     """Bloque para almacenar la señal recibida en una base de datos SQLite"""
