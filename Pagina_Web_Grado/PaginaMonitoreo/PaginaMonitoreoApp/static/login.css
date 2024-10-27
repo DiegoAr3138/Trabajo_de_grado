@@ -17,9 +17,12 @@ html,body{
   background: #1a75ff;
   color: #fff;
 }
+#div.wrapper {
+  width: 500px;
+}
 .wrapper{
   overflow: hidden;
-  max-width: 390px;
+  width: 500px;
   background: #fff;
   padding: 30px;
   border-radius: 15px;
@@ -183,3 +186,5 @@ form .btn input[type="submit"]{
   font-weight: 500;
   cursor: pointer;
 }
+
+

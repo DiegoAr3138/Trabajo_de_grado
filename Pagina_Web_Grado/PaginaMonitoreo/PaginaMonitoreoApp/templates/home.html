@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<!--  aqui va lo que va a cambiar -->
+<body>
+    {% if user %}
+        <h1>Bienvenido, {{ user.nombre }}!</h1>
+        <p><a href=" {% url 'Login' %}">Cerrar Sesión</a></p>
+    {% else %}
+        <h1>Bienvenido a la Página de Inicio</h1>
+        <p><a href="{% url 'Login' %}">Iniciar Sesión</a> | <a href="{% url 'signup' %}">Registrarse</a></p>
+    {% endif %}
+</body>
+
+{% endblock %}
+
