@@ -1,6 +1,6 @@
 body {
   font-family: 'Lora';
-  background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65));
+  background: #ffffff;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -29,6 +29,10 @@ p {
   text-transform: uppercase;
   line-height: 1;
   font-family: 'Raleway';
+}
+
+.site-heading span{
+  color:#0059b3;
 }
 
 .site-heading .site-heading-upper {
@@ -80,7 +84,7 @@ p {
 }
 
 #mainNav {
-  background-color: rgba(24, 64, 8);
+  background-color:#0059b3;
   font-family: 'Raleway';
 }
 
@@ -103,7 +107,7 @@ p {
     font-size: 0.9rem;
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: rgba(255, 255, 255, 0.4);
+    color: #ffffff;
     text-decoration: underline;
   }
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
@@ -229,7 +233,7 @@ p {
 }
 
 .footer {
-   background-color: rgba(24, 64, 8, 0.8);
+   background-color: #0059b3;
 }
 
 

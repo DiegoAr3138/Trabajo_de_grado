@@ -18,13 +18,13 @@ def home(request):
     return render(request, 'home.html')
 
 def perfil(request):
-    return HttpResponse('Perfil')
+    return render(request,'perfil.html')
 
 def señales(request):
-    return HttpResponse('Señales')
+    return render(request,'señales.html')
 
 def dispositivos(request):
-    return HttpResponse('Dispositivos')
+    return render(request,'dispositivos.html')
 
 def antenas(request):   
-    return HttpResponse('Antenas')
+    return render(request,'antenas.html')
